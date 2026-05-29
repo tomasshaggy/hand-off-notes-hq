@@ -35,10 +35,10 @@ Errors appear **on attempt only**.
 
 | Field | Condition for error border |
 |---|---|
-| Transfer Type | `attempted && !selectedTypeId` |
 | From Wallet | `attempted && !fromWallet` |
 | Amount card (asset + amount group) | `attempted && (!asset || !amount)` — single border on the white amount card; covers both asset-missing and amount-missing |
 | To Wallet | `attempted && !toWallet` |
+| Transfer Type | `attempted && !selectedTypeId` |
 | Loan | `attempted && isLiquidationPrep && loanIds.length === 0` — only required when reason is Liquidation Prep |
 | Note | `attempted && isNoteRequired && !note.trim()` |
 
